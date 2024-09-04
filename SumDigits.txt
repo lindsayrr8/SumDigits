@@ -1,0 +1,67 @@
+
+Start
+Define a function called computeSum that takes a single parameter, n (an integer)
+	Initialize a variable sum to 0
+	While n is not equal to 0:
+	Extract the last digit of n using the modulus (%) operator and assign it to a variable digit
+	Add digit to sum
+	Remove the last digit from n by dividing it by 10
+	Return sum
+   End of function
+
+   In the main program:
+      Print a message indicating the sum of digits in a specific number (e.g., 234)
+      Call the computeSum function with the specific number as an argument
+      Print the result
+   End
+
+
+
+---------------------------------------------------
+
+
+public class SumDigits {
+    public static void main(String[] args) {
+        // Tests the SumDigits method
+        System.out.println("Sum of digits in 234: " + computeSum(234));
+    }
+
+    // Method to compute the sum of the digits as int
+    public static int computeSum(long n) {
+        int sum = 0;
+        while (n != 0) {
+            // Extracts the last digit using the % operator
+            int digit = (int) (n % 10);
+            // Adds the extracted digit to the sum
+            sum += digit;
+            // Removes the last digit using the / operator
+            n /= 10;
+        }
+        return sum;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
